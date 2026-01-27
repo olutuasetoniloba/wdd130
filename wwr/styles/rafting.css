@@ -40,9 +40,12 @@ nav, p, section, article {
     width: 30px;
     height: auto;
 }
+.hero{
+    position: relative;
+}
 
 .hero article{
-    position: relative;
+    position: absolute;
 }
 
 .hero img {
