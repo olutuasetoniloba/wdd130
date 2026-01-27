@@ -41,7 +41,7 @@ nav, p, section, article {
     height: auto;
 }
 
-.hero {
+.hero article{
     position: relative;
 }
 
@@ -79,5 +79,5 @@ article{
 
 footer {
     background-color: var(--secondary-color);
-    color: #fff;
+    color: var(--accent2-color);
 }
