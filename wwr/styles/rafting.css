@@ -37,6 +37,8 @@ nav, p, section, article {
 
 .socialmedia a {
     text-decoration: none;
+    width: 30px;
+    height: auto;
 }
 
 .hero {
@@ -65,7 +67,7 @@ h1 {
 }
 article{
     position: absolute;
-    
+
 }
 
 .hero article img {
