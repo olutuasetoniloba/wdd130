@@ -19,6 +19,13 @@ body {
     color: var(--accent1-color);
 }
 
+header{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
 header, main, footer {
     max-width: 950px;
     width: 840px;
@@ -28,6 +35,12 @@ header, main, footer {
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 1.5rem;
+    align-items: center;
 }
 
 nav, p, section, article {
@@ -39,6 +52,8 @@ nav, p, section, article {
     text-decoration: none;
     width: 30px;
     height: auto;
+    display: flex;
+    gap: 15px
 }
 .hero{
     position: relative;
@@ -81,6 +96,11 @@ article{
 }
 
 footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 30px;   
     background-color: var(--secondary-color);
     color: var(--accent2-color);
+    
 }
