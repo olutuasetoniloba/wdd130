@@ -1,7 +1,7 @@
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,9 +11,10 @@ body {
     background: #fff;
 }
 
+/* Header */
 header {
     margin: 0 auto;
-    width: 650px;
+    max-width: 650px;
 }
 
 h1 {
@@ -23,16 +24,18 @@ h1 {
     text-align: center;
 }
 
+/* Form */
 form {
-    width: 650px;
+    max-width: 650px;
     margin: 0 auto;
-    padding: 0 auto;
+    padding: 1rem;
     border: 1px solid rgb(0 0 0 / 0.1);
     border-radius: 0.5rem;
     background-color: #eee;
     display: grid;
 }
 
+/* Fieldset */
 fieldset {
     display: grid;
     gap: .5rem;
@@ -47,9 +50,10 @@ legend {
     font-size: 1.3em;
 }
 
+/* Inputs */
 label, input, button, select, textarea {
     font-family: 'Times New Roman', Times, serif;
-} 
+}
 
 label {
     text-align: right;
@@ -61,45 +65,63 @@ input, select, textarea {
     font-size: 1.1rem;
 }
 
+/* Checkbox */
 input[type="checkbox"] {
     width: 22px;
     height: 22px;
     vertical-align: bottom;
 }
 
+/* Button */
 button {
     margin: 1rem;
     background-color: navy;
     color: #fff;
     border: none;
     border-radius: .5rem;
-    padding: 75rem;
+    padding: 0.75rem;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
-button :hover {
+button:hover {
     background-color: darkgreen;
 }
 
+/* Footer */
 footer {
-    margin: 1rem;
-    width: 650px;
+    margin: 1rem auto;
+    max-width: 650px;
     text-align: center;
     font-size: 0.8rem;
     color: #777;
     border-top: 1px solid #ccc;
 }
 
+/* Form Layout */
 .form-item {
     display: grid;
     align-items: center;
+    margin: 0.5rem 0;
 }
 
+/* Two Column Layout */
 .column {
     grid-template-columns: 3fr 1fr;
-    margin: 0.5rem 0;
 }
 
 .column2 {
     grid-template-columns: 1fr 2fr;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    label {
+        text-align: left;
+    }
+
+    .column,
+    .column2 {
+        grid-template-columns: 1fr;
+    }
 }

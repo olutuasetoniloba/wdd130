@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML and CSS Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+    <h1>Basic HTML and CSS Quiz</h1>
+
+    <form>
+
+        <!-- Question 1 -->
+        <label for="q1">1. What tag is used to create a hyperlink in HTML?</label>
+        <input type="text" id="q1" name="q1" placeholder="Type your answer here" required>
+
+        <!-- Question 2 -->
+        <label for="q2">2. Briefly explain what CSS is used for.</label>
+        <textarea id="q2" name="q2" placeholder="Enter your answer here" required></textarea>
+
+        <!-- Question 3 -->
+        <label for="q3">3. Which of these is a web browser?</label>
+        <select id="q3" name="q3" required>
+            <option value="" selected disabled>Choose One</option>
+            <option value="chrome">Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="edge">Microsoft Edge</option>
+        </select>
+
+        <!-- Question 4 -->
+        <label for="q4">4. How many heading levels are there in HTML?</label>
+        <input type="number" id="q4" name="q4" min="1" max="6" required>
+
+        <button type="submit">Submit Quiz</button>
+
+    </form>
+
+</body>
+
+</html>
