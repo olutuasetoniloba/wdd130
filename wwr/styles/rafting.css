@@ -1,153 +1,274 @@
+
+
 :root {
   --primary-color: #055a05;
   --secondary-color: #f4a261;
   --accent1-color: #264653;
   --accent2-color: #e9c46a;
 
-  --heading-font: "Times New Roman", "Georgia", serif;
+  --heading-font: "Times New Roman", Georgia, serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  line-height: 1.6;
 }
 
-header{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    padding: 1rem 2rem;
+
+header,
+main,
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-header, main, footer {
-    max-width: 950px;
-    width: 840px;
-    margin: 0 auto;
+header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
 }
 
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 200px 1fr;
-    gap: 1.5rem;
-    align-items: center;
+header img {
+  width: 100px;
 }
 
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
 }
 
-.socialmedia a {
-    text-decoration: none;
-    width: 30px;
-    height: auto;
-    display: flex;
-    gap: 15px
-}
-.hero{
-    position: relative;
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--accent1-color);
+  transition: 0.3s;
 }
 
-.hero article{
-    position: absolute;
+nav a:hover {
+  color: var(--secondary-color);
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
 }
 
 .hero img {
-    display: block;
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    max-width: 200px;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff;
-}
-article{
-    position: absolute;
-
+.hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(38, 70, 83, 0.8);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
 }
 
-.hero article img {
-    float: right;
-    width: 125px;
-    border: 2px solid #fff;
-    margin: auto;
+
+.cta {
+  text-align: center;
+  margin: 2rem 0;
 }
 
-footer {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 15px 30px;   
-    background-color: var(--secondary-color);
-    color: var(--accent2-color);
-    
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
 }
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+}
+
+
+.newsletter {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.newsletter form {
+  display: grid;
+  gap: 1rem;
+}
+
+.newsletter input {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.newsletter button {
+  padding: 0.6rem;
+  background-color: var(--accent1-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  background-color: var(--secondary-color);
+}
+
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.grid-item {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.grid-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.trip {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.trip img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+
+.trip-table {
+  margin: 2rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
 
 .company-info {
-    text-align: center;
-    margin: 2rem auto;
-    max-width: 800px;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
 }
 
 .company-info iframe {
-    width: 100%;
-    height: 300px;
-    border-radius: 8px;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  border: none;
 }
 
 .employees {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
 }
 
 .employees figure {
-    text-align: center;
+  text-align: center;
 }
 
 .employees img {
-    width: 200px;
-    border-radius: 10px;
+  width: 200px;
+  border-radius: 10px;
 }
 
 .contact-form {
-    max-width: 600px;
-    margin: 2rem auto;
+  max-width: 600px;
+  margin: 2rem auto;
 }
 
 .contact-form form {
-    display: grid;
-    gap: 1rem;
+  display: grid;
+  gap: 1rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: var(--accent1-color);
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.socialmedia {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialmedia img {
+  width: 30px;
+}
